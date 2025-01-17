@@ -27,6 +27,7 @@ class MainApp extends StatelessWidget {
     }
 
     return MaterialApp(
+      title: "Liz's Portfolio",
       home: Scaffold(
         backgroundColor: AppColors.appBackgroundColor,
         body: isDesktop ? WebScreen() : PortfolioDetails(),

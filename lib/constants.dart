@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/carousel_list_item.dart';
 
+// final List<String> courses = [
+//   "\"The Complete Flutter Development Bootcamp\" by Angela Yu @ The App Brewery",
+//   "\"Flutter & Dart - The Complete Guide (2023 Ed.)\" by (Max)imilian Schwarzmuller @ Udemy",
+//   "\"The Complete Dart Developer Guide\" by Andrea Bizzotto @ Code with Andrea",
+//   "\"Programming & CS\" @ Brilliant",
+// ];
+
+// final List<String> extras = [
+//   'DRY',
+//   'Jira',
+//   'Sourcetree',
+//   'Postman',
+// ];
+
 final List<CarouselListItem> projectSlides = [
   CarouselListItem(projectTitle: "MK8"),
   CarouselListItem(projectTitle: "BMI Calculator"),
