@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/list_of_details.dart';
+import 'package:portfolio/project_list.dart';
 
 class WebScreen extends StatelessWidget {
   const WebScreen({super.key});
@@ -27,5 +28,17 @@ class WebScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Featured Projects:',
+                style: AppTextStyles.titleTextStyle(context),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ProjectList(),
+            ),
+          ],
   }
 }

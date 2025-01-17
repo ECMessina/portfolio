@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/list_of_details.dart';
+import 'package:portfolio/project_list.dart';
 
 class PortfolioDetails extends StatelessWidget {
   const PortfolioDetails({
@@ -17,6 +18,14 @@ class PortfolioDetails extends StatelessWidget {
               child: CircleAvatarDetails.portfolioPic(context),
             ),
             ListOfDetails(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Featured Projects:',
+                style: AppTextStyles.titleTextStyle(context),
+              ),
+            ),
+            ProjectList(),
           ],
   }
 }

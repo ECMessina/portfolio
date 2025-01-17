@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/carousel_list_item.dart';
+
+final List<CarouselListItem> projectSlides = [
+  CarouselListItem(projectTitle: "MK8"),
+  CarouselListItem(projectTitle: "BMI Calculator"),
+  CarouselListItem(projectTitle: "Meals"),
+  CarouselListItem(projectTitle: "Favorite Places"),
+  CarouselListItem(projectTitle: "Roll Dice"),
+];
 
 class AppColors {
   static Color appBackgroundColor = Colors.blue.shade100;
   static Color textColor = Colors.blueGrey.shade900;
   static Color detailsButtonColor = Colors.blue.shade200;
+  static Color carouselItemBackgroundColor = Colors.blue.shade300;
+  static Color carouselItemShadowColor = Colors.blue.shade500;
 }
 
 class SizeAdj {
@@ -13,13 +24,19 @@ class SizeAdj {
   static late double fontForSizeName;
   static late double fontForSizeTitle;
   static late double fontForSizeList;
+  static late double heightOfCarousel;
   static late double avatarRadius;
+  static late double slideSize;
     avatarRadius = 130.0;
+    heightOfCarousel = 175.0;
+    slideSize = 0.65;
     fontForSizeIntro = 20;
     fontForSizeName = 30;
     fontForSizeTitle = 32;
     fontForSizeList = 15;
     avatarRadius = 200.0;
+    heightOfCarousel = 280.0;
+    slideSize = 0.2;
     fontForSizeIntro = 28;
     fontForSizeName = 40;
     fontForSizeTitle = 50;
