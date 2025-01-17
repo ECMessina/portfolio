@@ -16,10 +16,11 @@ class AppColors {
   static Color detailsButtonColor = Colors.blue.shade200;
   static Color carouselItemBackgroundColor = Colors.blue.shade300;
   static Color carouselItemShadowColor = Colors.blue.shade500;
+  static Color dotColor = Colors.blueGrey.shade300;
+  static Color activeDotColor = const Color.fromARGB(255, 5, 33, 75);
 }
 
 class SizeAdj {
-  static void init(BuildContext context) {}
   static late double fontForSizeIntro;
   static late double fontForSizeName;
   static late double fontForSizeTitle;
@@ -27,20 +28,31 @@ class SizeAdj {
   static late double heightOfCarousel;
   static late double avatarRadius;
   static late double slideSize;
+  static late double dotJump;
+
+  static void init(BuildContext context) {
     avatarRadius = 130.0;
     heightOfCarousel = 175.0;
     slideSize = 0.65;
+    dotJump = 15;
     fontForSizeIntro = 20;
     fontForSizeName = 30;
     fontForSizeTitle = 32;
     fontForSizeList = 15;
+  }
+
+  static void desktop(BuildContext context) {
     avatarRadius = 200.0;
     heightOfCarousel = 280.0;
     slideSize = 0.2;
+    dotJump = 20;
     fontForSizeIntro = 28;
     fontForSizeName = 40;
     fontForSizeTitle = 50;
     fontForSizeList = 24;
+  }
+}
+
 class AppTextStyles {
   static TextStyle introTextStyle(BuildContext context) {
     return GoogleFonts.newsreader(

@@ -10,7 +10,10 @@ class PortfolioDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Scrollbar(
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -27,5 +30,8 @@ class PortfolioDetails extends StatelessWidget {
             ),
             ProjectList(),
           ],
+        ),
+      ),
+    );
   }
 }

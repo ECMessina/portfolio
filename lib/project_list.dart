@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/utils.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProjectList extends StatefulWidget {
   const ProjectList({super.key});
@@ -16,6 +18,7 @@ class _ProjectListState extends State<ProjectList> {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = Utils.isDesktop(context);
     return Column(
       children: [
         CarouselSlider.builder(
@@ -31,12 +34,31 @@ class _ProjectListState extends State<ProjectList> {
               milliseconds: 800,
             ),
             viewportFraction: SizeAdj.slideSize,
+            onPageChanged: (index, reason) {
+              setState(() {
+                activeProjectIndex = index;
+              });
+            },
           ),
           itemBuilder: (BuildContext context, int index, int realIndex) {
             return projectSlides[index];
           },
           itemCount: projectSlides.length,
         ),
+        if (isDesktop) SizedBox(height: 16),
+        AnimatedSmoothIndicator(
+          activeIndex: activeProjectIndex,
+          count: projectSlides.length,
+          effect: JumpingDotEffect(
+            activeDotColor: AppColors.activeDotColor,
+            dotColor: AppColors.dotColor,
+            dotHeight: 10,
+            dotWidth: 10,
+            spacing: 10,
+            jumpScale: 1.5,
+            verticalOffset: SizeAdj.dotJump,
+          ),
+        )
       ],
     );
   }

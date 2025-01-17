@@ -8,7 +8,10 @@ class WebScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Scrollbar(
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -40,5 +43,8 @@ class WebScreen extends StatelessWidget {
               child: ProjectList(),
             ),
           ],
+        ),
+      ),
+    );
   }
 }
