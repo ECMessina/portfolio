@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/list_of_details.dart';
 
 class WebScreen extends StatelessWidget {
   const WebScreen({super.key});
@@ -17,6 +18,12 @@ class WebScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: CircleAvatarDetails.portfolioPic(context),
                   ),
+                  Spacer(),
+                  Expanded(
+                    flex: 4,
+                    child: ListOfDetails(),
+                  ),
+                  Spacer(),
                 ],
               ),
             ),
