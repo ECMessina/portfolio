@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:portfolio/constants.dart';
+import 'package:portfolio/portfolio_details.dart';
+import 'package:portfolio/utils.dart';
+import 'package:portfolio/web_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,11 +19,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    bool isDesktop = Utils.isDesktop(context);
+    if (isDesktop) {
+      SizeAdj.desktop(context);
+    } else {
+      SizeAdj.init(context);
+    }
+
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        backgroundColor: AppColors.appBackgroundColor,
+        body: isDesktop ? WebScreen() : PortfolioDetails(),
       ),
     );
   }
