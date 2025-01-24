@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 
 class ExperienceDetailsButton extends StatelessWidget {
-  const ExperienceDetailsButton(
-      {super.key, required this.header, required this.list});
+  const ExperienceDetailsButton({
+    super.key,
+    required this.header,
+    required this.list,
+  });
 
   final String header;
   final String list;
@@ -30,7 +33,10 @@ class ExperienceDetailsButton extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("$header:"),
+          title: Text(
+            "$header:",
+            style: AppTextStyles.introTextStyle(context),
+          ),
           content: SizedBox(
             width: double.maxFinite,
             child: Text(
@@ -42,7 +48,10 @@ class ExperienceDetailsButton extends StatelessWidget {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: Text('Close'),
+              child: Text(
+                'Close',
+                style: AppTextStyles.introTextStyle(context),
+              ),
             ),
           ],
         );

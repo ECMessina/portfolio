@@ -17,11 +17,41 @@ import 'package:portfolio/carousel_list_item.dart';
 // ];
 
 final List<CarouselListItem> projectSlides = [
-  CarouselListItem(projectTitle: "MK8"),
-  CarouselListItem(projectTitle: "BMI Calculator"),
-  CarouselListItem(projectTitle: "Meals"),
-  CarouselListItem(projectTitle: "Favorite Places"),
-  CarouselListItem(projectTitle: "Roll Dice"),
+  CarouselListItem(
+    projectTitle: "MK8",
+    description: 'Featuring riverpod',
+    iconPath: 'images/mk8.png',
+    url: '',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "Tip Calculator",
+    description: 'Featuring forms & arithmetic',
+    iconPath: 'images/tip_calc.png',
+    url: '',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "Meals",
+    description: 'Featuring menus',
+    iconPath: 'images/tip_calc.png',
+    url: '',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "Favorite Places",
+    description: 'Featuring maps',
+    iconPath: 'images/tip_calc.png',
+    url: '',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "Roll Dice",
+    description: 'Featuring sound & animation',
+    iconPath: 'images/roll_dice.png',
+    url: '',
+    isActive: false,
+  ),
 ];
 
 class AppColors {

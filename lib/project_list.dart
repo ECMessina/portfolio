@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:portfolio/carousel_list_item.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/utils.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -41,7 +42,14 @@ class _ProjectListState extends State<ProjectList> {
             },
           ),
           itemBuilder: (BuildContext context, int index, int realIndex) {
-            return projectSlides[index];
+            final bool isActive = index == activeProjectIndex;
+            return CarouselListItem(
+              projectTitle: projectSlides[index].projectTitle,
+              description: projectSlides[index].description,
+              iconPath: projectSlides[index].iconPath,
+              url: projectSlides[index].url,
+              isActive: isActive,
+            );
           },
           itemCount: projectSlides.length,
         ),
