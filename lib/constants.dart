@@ -2,54 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/carousel_list_item.dart';
 
-// final List<String> courses = [
-//   "\"The Complete Flutter Development Bootcamp\" by Angela Yu @ The App Brewery",
-//   "\"Flutter & Dart - The Complete Guide (2023 Ed.)\" by (Max)imilian Schwarzmuller @ Udemy",
-//   "\"The Complete Dart Developer Guide\" by Andrea Bizzotto @ Code with Andrea",
-//   "\"Programming & CS\" @ Brilliant",
-// ];
+final List<String> kCoursesList = [
+  '"The Complete Flutter Development Bootcamp" by Angela Yu @ The App Brewery',
+  '"Flutter & Dart - The Complete Guide (2023 Ed.)" by (Max)imilian Schwarzmuller @ Udemy',
+  '"The Complete Dart Developer Guide" by Andrea Bizzotto @ Code with Andrea',
+  '"Programming & CS" @ Brilliant',
+];
 
-// final List<String> extras = [
-//   'DRY',
-//   'Jira',
-//   'Sourcetree',
-//   'Postman',
-// ];
+final List<String> kExtraExperiencesList = [
+  'DRY',
+  'Jira',
+  'Sourcetree',
+  'Postman',
+];
 
-final List<CarouselListItem> projectSlides = [
+final List<CarouselListItem> kProjectSlides = [
   CarouselListItem(
     projectTitle: "MK8",
     description: 'Featuring riverpod',
     iconPath: 'images/mk8.png',
-    url: '',
+    url: 'https://github.com/ECMessina/mk8_randomizer',
     isActive: false,
   ),
   CarouselListItem(
-    projectTitle: "Tip Calculator",
+    projectTitle: "Tip?",
     description: 'Featuring forms & arithmetic',
     iconPath: 'images/tip_calc.png',
-    url: '',
+    url: 'https://github.com/ECMessina/tip_calc',
     isActive: false,
   ),
   CarouselListItem(
-    projectTitle: "Meals",
-    description: 'Featuring menus',
-    iconPath: 'images/tip_calc.png',
-    url: '',
-    isActive: false,
-  ),
-  CarouselListItem(
-    projectTitle: "Favorite Places",
-    description: 'Featuring maps',
-    iconPath: 'images/tip_calc.png',
-    url: '',
-    isActive: false,
-  ),
-  CarouselListItem(
-    projectTitle: "Roll Dice",
+    projectTitle: "Roll It!",
     description: 'Featuring sound & animation',
     iconPath: 'images/roll_dice.png',
-    url: '',
+    url: 'https://github.com/ECMessina/roll_it',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "Weather?",
+    description: 'Featuring permissions & API responses',
+    iconPath: 'images/weather.png',
+    url: 'https://github.com/ECMessina/weather',
+    isActive: false,
+  ),
+  CarouselListItem(
+    projectTitle: "I'm Bored",
+    description: 'Featuring riverpod & API responses',
+    iconPath: 'images/bored.png',
+    url: 'https://github.com/ECMessina/bored',
     isActive: false,
   ),
 ];
@@ -77,7 +77,7 @@ class SizeAdj {
   static void init(BuildContext context) {
     avatarRadius = 130.0;
     heightOfCarousel = 175.0;
-    slideSize = 0.65;
+    slideSize = 0.5;
     dotJump = 15;
     fontForSizeIntro = 20;
     fontForSizeName = 30;

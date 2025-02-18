@@ -28,7 +28,6 @@ class _ProjectListState extends State<ProjectList> {
             height: SizeAdj.heightOfCarousel,
             enlargeCenterPage: true,
             autoPlay: true,
-            aspectRatio: 16 / 9,
             autoPlayCurve: Curves.fastOutSlowIn,
             enableInfiniteScroll: true,
             autoPlayAnimationDuration: Duration(
@@ -44,19 +43,19 @@ class _ProjectListState extends State<ProjectList> {
           itemBuilder: (BuildContext context, int index, int realIndex) {
             final bool isActive = index == activeProjectIndex;
             return CarouselListItem(
-              projectTitle: projectSlides[index].projectTitle,
-              description: projectSlides[index].description,
-              iconPath: projectSlides[index].iconPath,
-              url: projectSlides[index].url,
+              projectTitle: kProjectSlides[index].projectTitle,
+              description: kProjectSlides[index].description,
+              iconPath: kProjectSlides[index].iconPath,
+              url: kProjectSlides[index].url,
               isActive: isActive,
             );
           },
-          itemCount: projectSlides.length,
+          itemCount: kProjectSlides.length,
         ),
         if (isDesktop) SizedBox(height: 16),
         AnimatedSmoothIndicator(
           activeIndex: activeProjectIndex,
-          count: projectSlides.length,
+          count: kProjectSlides.length,
           effect: JumpingDotEffect(
             activeDotColor: AppColors.activeDotColor,
             dotColor: AppColors.dotColor,

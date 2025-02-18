@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/experience_list.dart';
 
 class ExperienceDetailsButton extends StatelessWidget {
   const ExperienceDetailsButton({
@@ -9,7 +10,7 @@ class ExperienceDetailsButton extends StatelessWidget {
   });
 
   final String header;
-  final String list;
+  final List<String> list;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,8 @@ class ExperienceDetailsButton extends StatelessWidget {
           ),
           content: SizedBox(
             width: double.maxFinite,
-            child: Text(
-              list,
-              style: AppTextStyles.listText(context),
-              textAlign: TextAlign.center,
+            child: ExperienceList(
+              list: list,
             ),
           ),
           actions: [
