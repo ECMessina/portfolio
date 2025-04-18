@@ -20,7 +20,7 @@ final List<String> kExtraExperiencesList = [
 final List<CarouselListItem> kProjectSlides = [
   CarouselListItem(
     projectTitle: "MK8",
-    description: 'Featuring riverpod',
+    description: 'Featuring Riverpod',
     iconPath: 'images/mk8.png',
     url: 'https://github.com/ECMessina/mk8_randomizer',
     isActive: false,
@@ -48,7 +48,7 @@ final List<CarouselListItem> kProjectSlides = [
   ),
   CarouselListItem(
     projectTitle: "I'm Bored",
-    description: 'Featuring riverpod & API responses',
+    description: 'Featuring Riverpod & API responses',
     iconPath: 'images/bored.png',
     url: 'https://github.com/ECMessina/bored',
     isActive: false,
