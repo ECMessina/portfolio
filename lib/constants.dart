@@ -7,6 +7,7 @@ final List<String> kCoursesList = [
   '"Flutter & Dart - The Complete Guide (2023 Ed.)" by (Max)imilian Schwarzmuller @ Udemy',
   '"The Complete Dart Developer Guide" by Andrea Bizzotto @ Code with Andrea',
   '"Programming & CS" @ Brilliant',
+  '"Flutter UI Challenges" by Andrea Bizzotto @ Code with Andrea',
 ];
 
 final List<String> kExtraExperiencesList = [
